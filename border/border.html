@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+         a { color: #333;border: 1px solid #EDEDED; width:80px;height:40px;    text-align: center; display: block; line-height: 40px;  transition: all 0.6s ease-in;}
+          .c-btn {  text-decoration: none; position: relative; display: inline-block;  height: 100%; }
+          .c-btn:after { content: ''; display: block; position: absolute; }
+          .c-btn:before { content: ''; display: block; position: absolute; }
+          .c-btn--border-line { background: none;  box-sizing: border-box; box-shadow: inset 0 0 0 0px transparent;  }
+          .c-btn--border-line:after, .c-btn--border-line:before { box-sizing: border-box; border: 1px solid transparent; width: 0; height: 0; }
+          .c-btn--border-line:after { top: 0; left: 0; transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s; }
+          .c-btn--border-line:before { bottom: 0; right: 0; transition: border-color 0s ease-in 0.4s, width 0.2s ease-in 0.2s, height 0.2s ease-in; }
+          .c-btn--border-line:hover:after, .c-btn--border-line:hover:before { width: 100%; height: 100%; }
+          .c-btn--border-line:hover:after { border-top-color: #367dff; border-right-color: #367dff;  transition: width 0.2s ease-out, height 0.2s ease-out 0.2s; }
+          .c-btn--border-line:hover:before { border-bottom-color: #367dff; border-left-color: #367dff;transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s; }
+        </style>
+    </head>
+    <body>
+    <a class="c-btn c-btn--border-line">hhahah</a>
+    </body>
+</html>

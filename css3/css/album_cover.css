@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.demo {
+    width: 1030px;
+    margin: 50px auto;
+}
+
+.list {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin: 20px;
+    position: relative;
+}
+
+.list div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-100deg);
+    transform-origin: top left;
+    /* 旋转中心点*/
+    transition: transform .8s;
+}
+
+.current div {
+    transform: rotate(0deg);
+}
+
+.list div.top {
+    transform-origin: top left;
+}
+
+.list div.right {
+    transform-origin: top right;
+}
+
+.list div.bottom {
+    transform-origin: bottom right;
+}
+
+.list div.left {
+    transform-origin: bottom left;
+}
+
+.envelope {
+    position: fixed;
+    right: 70px;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.envelope.animate {
+    bottom: 200px;
+    opacity: 1;
+}
+
+.envelope a {
+    display: block;
+    width: 102px;
+    height: 65px;
+    background: url(../images/sprite.png) no-repeat 0 -189px;
+}
+
+.envelope a:hover {
+    height: 94px;
+    background: url(../images/sprite.png) no-repeat 0 0;
+}

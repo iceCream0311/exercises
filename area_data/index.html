@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <label>所在地</label>
+    <select id="city">
+        <option value="">北京</option>
+    </select>
+    <select id="county">
+        <option value="">请选择</option>
+    </select>
+    <select id="area">
+        <option value="">请选择</option>
+    </select>
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+    $.ajax({
+            type: "GET",
+            url: "./address.json",
+            async: "false",
+            success: function(data) {
+                var city = '';
+                data = eval(data)
+                    /*初始化*/
+                city += data.map(forarr)
+                $("#city").html(city);
+                Citys(data)
+                    /*城市选择事件*/
+                $("#city").change(function() {
+                    Citys(data)
+                })
+            },
+            error: function() {
+                alert("网络加载错误")
+            }
+        })
+        /*城市点击*/
+    function Citys(data) {
+        var county = changeCity(data, $("#city"));
+        $("#county").html(county[0]);
+        /*县选择事件*/
+        var area = changeCity(eval(county[1]), $("#county"));
+        /*区域显示*/
+        $("#area").show()
+        $("#area").html('<option value="">请选择</option>' + area[0])
+        $("#county").change(function() {
+            var area = changeCity(eval(county[1]), $("#county"));
+            $("#area").show()
+            $("#area").html('<option value="">请选择</option>' + area[0])
+        })
+    }
+    /*变换事件*/
+    function changeCity(data, dom) {
+        var county = "",
+            counties = []
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].name == dom.val()) {
+                if (data[i].city) {
+                    counties = data[i].city
+                }
+                if (data[i].area) {
+                    counties = data[i].area
+                }
+
+                break;
+            }
+        }
+        county += counties.map(forarr)
+        console.log(counties)
+        return [county, counties];
+    }
+    /*循环数组问题*/
+    function forarr(item) {
+        if (item.name) {
+            return ('<option value=' + item.name + '>' + item.name + '</option>')
+        } else {
+            return ('<option value=' + item + '>' + item + '</option>')
+        }
+
+    }
+    </script>
+</body>
+
+</html>

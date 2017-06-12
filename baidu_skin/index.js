@@ -30,7 +30,7 @@
         var srcstr1=srcstr.substring(srcstr.indexOf("images/"),srcstr.indexOf("."))
         var srcstr2=srcstr.substring(srcstr.indexOf("."),srcstr.length)
         srcstr=srcstr1+'(1)'+srcstr2;
-        document.body.style.backgroundImage='url("./'+srcstr+'")';
+        document.body.style.backgroundImage='url("'+srcstr+'")';
         for (var g = 0; g < $(".s-skin-preview").length; g++) {
           $(".s-skin-preview")[g].style.display="none"
         }

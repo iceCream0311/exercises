@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用form表单</title>
+</head>
+
+<body>
+    <!--上传事件可以通过input的onChange事件来触发,此种方法会对当前页面进行刷新-->
+    <form action="url" method="POST" enctype="multipart/form-data">
+        <!--accept可以接受图片的格式-->
+        <input type="file" name="file" accept="image/gif/png,image.jpg">
+        <!--带一些其它的参数，比如Token来源验证等等。-->
+        <input type="hidden">
+        <input type="submit" value="上传">
+    </form>
+</body>
+
+</html>

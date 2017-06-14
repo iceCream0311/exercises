@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="jquery.datetimepicker.css" />
+    <style type="text/css">
+        .xdsoft_datetimepicker .xdsoft_calendar td > div {padding-right: 10px;padding-top: 5px}
+        .xdsoft_datetimepicker .xdsoft_label {position: absolute;  left: 26px;padding-top: 4px}
+        .xdsoft_datetimepicker .xdsoft_year {margin-right: 10px;}
+        .xdsoft_datetimepicker .xdsoft_month {width: 110px;}
+
+    </style>
+</head>
+<body>
+    <input id="datetimepicker" type="text">
+    <script src="./jquery.js"></script>
+    <script src="jquery.datetimepicker.full.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#datetimepicker').datetimepicker({
+            format: "Y-m-d", //格式化日期
+            timepicker: false, //关闭时间选项
+            yearStart: 2000, //设置最小年份
+            yearEnd: 2050, //设置最大年份
+            todayButton: false //关闭选择今天按钮
+        })
+        $.datetimepicker.setLocale('ch');
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajax无刷新上传</title>
+</head>
+<!--XMLHttpRequestLevel 2添加了一个新的接口FormData-->
+
+<body>
+    <form>
+        <input type="file" id="file" name="file">
+        <input type="hidden" id="token" name="token" value="nihao" />
+    </form>
+    <script>
+    var fileInput = document.querySelector('#file'),
+        tokenInput = document.querySelector('#token');
+    fileInput.addEventListener('change', function() {
+        // fileInput的files属性是一个对象，包括一个key为0 value为file的值
+        var formData = new FormData();
+        formData.append('file', fileInput.files[0]);
+        formData.append('token', tokenInput.value);
+        //ajax操作
+    })
+    </script>
+</body>
+
+</html>

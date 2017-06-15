@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+<link rel="stylesheet" type="text/css" href="simditor-2.3.6/styles/simditor.css" />
+<script type="text/javascript" src="./simditor-2.3.6/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="./simditor-2.3.6/scripts/module.js"></script>
+<script type="text/javascript" src="./simditor-2.3.6/scripts/hotkeys.js"></script>
+<script type="text/javascript" src="./simditor-2.3.6/scripts/uploader.js"></script>
+<script type="text/javascript" src="./simditor-2.3.6/scripts/simditor.js"></script>
+
+<body>
+    <textarea id="editor" placeholder="Balabala" autofocus></textarea>
+    <button id="btn">提交</button>
+</body>
+<script type="text/javascript">
+$(function() {
+    toolbar = ['image'];
+    var editor = new Simditor({
+        textarea: $('#editor'),
+        placeholder: '这里输入内容...',
+        toolbar: toolbar, //工具栏
+        defaultImage: 'simditor-2.0.1/images/image.png', //编辑器插入图片时使用的默认图片
+        upload: {
+            url: 'ImgUpload.action', //文件上传的接口地址
+            params: null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
+            fileKey: 'fileDataFileName', //服务器端获取文件数据的参数名
+            connectionCount: 3,
+            leaveConfirm: '正在上传文件'
+        }
+    });
+    $("#btn").click(function(){
+      alert(editor.getValue())
+    })
+
+})
+</script>
+
+</html>

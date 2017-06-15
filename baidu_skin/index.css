@@ -1,0 +1,30 @@
+*{margin:0;padding: 0}
+html,body{width: 100%;height: 100%;background-size: cover;}
+.top{width:100%;height: 32px;line-height:32px;border-bottom: 1px solid #ccc;padding-left: 15px;position: fixed;top:0;background-color: rgba(15,25,50,.3);}
+.top a{display:inline-block;height: 100%;text-align:center;color: #fff}
+.s-skin-layer{width: 100%;background-color: #fff;position: fixed;top:0;display: none;  animation: fadeIn;/*动画名称*/
+  animation-duration: 0.5s;/*动画持续时间*/
+  -webkit-animation:fadeIn 0.5s;/*针对webkit内核*/}
+.skin-layer{padding: 25px 0; width: 911px;margin: 0 auto;overflow: hidden;}
+.skin-layer>div{float: left;}
+.s-skin-content{width: 294px;height: 180px;}
+ul li{list-style:none;float: left;border-bottom: 1px solid #fff;border-right: 1px solid #fff;cursor: pointer;position: relative;}
+ul li img{width: 100%;}
+ul li.skin-img-item{height: 59px; width: 97px;}
+ul li.big-img-li {width: 195px;height: 119px;}
+.skin-layer .s-skin-preview-box{float: right;width: 246px;height: 180px;float: right; position: relative;}
+.s-skin-preview-box img{width: 100%;height: 100%;}
+.s-skin-preview-mark{width: 100%;height: 100%;background:url(images/skin_preview_05c7c9e3.png) no-repeat top left;position: absolute; top:0; left: 0}
+.s-skin-preview{    position: absolute;bottom: 4px;right: 4px;width: 18px;height: 18px;background:url(./images/skin_icon_png24_62d35ae7.png) no-repeat -180px 0;display: none; }
+@-webkit-keyframes fadeIn {
+  0% {
+  opacity: 0;
+  }
+  30% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+
+  }
+}

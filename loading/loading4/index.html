@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>圆环</title>
+        <style type="text/css">
+          .loading-box{display:flex;-webkit-flex:0 1 auto;flex:0 1 auto;-webkit-flex-direction:column;flex-direction:column;-webkit-flex-grow:1;flex-grow:1;-webkit-flex-shrink:0;flex-shrink:0;-webkit-flex-basis:25%;flex-basis:25%;max-width:25%;height:200px;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;}
+          .circle{width:35px;height:35px;border:2px solid;border-color:#4DAF7C;border-bottom-color:transparent;border-radius:100%;background:transparent !important;animation:animte 0.75s 0s infinite linear;animation-fill-mode:both;display:inline-block;}
+            @keyframes animte{
+              0% {transform: rotate(0deg) scale(1);}
+              50% {transform: rotate(180deg) scale(0.8);}
+              100% {transform: rotate(360deg) scale(1);}
+            }
+        </style>
+    </head>
+    <body>
+     <div class="loading-box">
+      <div>
+        <div class="circle"></div>
+      </div>
+     </div>
+    </body>
+</html>

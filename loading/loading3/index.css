@@ -1,0 +1,21 @@
+.loading-box{position: relative;margin:100px auto;display:flex;-webkit-flex:0 1 auto;flex:0 1 auto;-webkit-flex-direction:column;flex-direction:column;-webkit-flex-grow:1;flex-grow:1;-webkit-flex-shrink:0;flex-shrink:0;-webkit-flex-basis:25%;flex-basis:25%;max-width:25%;height:200px;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;}
+.loading-circle{position:relative;font-size:0;position: relative;}
+.circle,.circle1,.circle2,.circle3,.circle4,.circle5,.circle6,.circle7{
+  background-color:#4DAF7C;height:15px;width:5px;margin:2px;border-radius:2px;animation-fill-mode:both;position:absolute;
+}
+.circle7{top:20px;left:0;animation:animte 1.2s 0.12s infinite ease-in-out;}
+.circle {top:13.636363636363637px;left:13.636363636363637px;transform:rotate(-45deg);animation:animte 1.2s 0.24s infinite ease-in-out;}
+.circle1{top:0;left:20px;transform:rotate(90deg);animation:animte 1.2s 0.36s infinite ease-in-out;}
+.circle2{top:-13.636363636363637px;left:13.636363636363637px;transform:rotate(45deg);animation:animte 1.2s 0.48s infinite ease-in-out;}
+.circle3{top:-20px;left:0;animation:animte 1.2s 0.6s infinite ease-in-out;}
+.circle4{top:-13.636363636363637px;left:-13.636363636363637px;transform:rotate(-45deg);animation:animte 1.2s 0.72s infinite ease-in-out;}
+.circle5{top:0;left:-20px;transform:rotate(90deg);animation:animte 1.2s 0.84s infinite ease-in-out;}
+.circle6{top:13.636363636363637px;left:-13.636363636363637px;transform:rotate(45deg);animation:animte 1.2s 0.96s infinite ease-in-out;}
+@keyframes animte {
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+      opacity: 1;
+  }
+}

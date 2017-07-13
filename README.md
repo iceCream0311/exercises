@@ -9,3 +9,5 @@
 5. [simditor编辑器](./simditor编辑器/index.html)
 6. [jquery.datetimepicker日期选择](./日期选择器/index1.html)
 7. [ajax模拟form表单上传](/模拟form文件上传方式/ajax无刷新上传1.html)
+7. [js轮播图](/carousel/index.html)
+7. [加载动画](/loading)

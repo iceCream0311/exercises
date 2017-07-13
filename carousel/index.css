@@ -1,0 +1,13 @@
+*{margin: 0;padding: 0}
+ul li,ol li{list-style: none}
+.carousel-box{width: 960px;height:322px;margin: 60px auto;position: relative;overflow:hidden;}
+.carousel-box ul {width: 100%;height:100%;}
+.carousel-box ul img{width: 100%;height:100%;}
+.carousel-box ul li{width: 100%;height:100%;position: absolute;left: 0;top: 0;}
+.carousel-box ol{position: absolute;bottom:10px;left: 50%; z-index: 15; width: 60%;padding-left: 0;margin-left: -30%;text-align: center;}
+.carousel-box ol li{display: inline-block;width: 10px; height: 10px;margin: 1px;border: 1px solid #fff;background-color: transparent;z-index: 555;border-radius: 50%}
+.carousel-box ol li.active{background-color: #fff;}
+.carousel-control{width: 50px;height: 50px;position: absolute;top:50%;margin-top: -25px;background: url(images/icon.png) no-repeat 14px 5px;}
+.carousel-control.left{left: 5px;}
+.carousel-control.right{right: 5px; background-position: left -42px }
+.carousel-control img{width: 100%;height: 100%}

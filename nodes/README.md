@@ -78,8 +78,8 @@ $ node helloworld.js
 我们来把目标设定得简单点，不过也要够实际才行：
 
 用户可以通过浏览器使用我们的应用。
-当用户请求http://domain/start时，可以看到一个欢迎页面，页面上有一个文件上传的表单。
-用户可以选择一个图片并提交表单，随后文件将被上传到http://domain/upload，该页面完成上传后会把图片显示在页面上。
+当用户请求[http://domain/start](http://domain/start)时，可以看到一个欢迎页面，页面上有一个文件上传的表单。
+用户可以选择一个图片并提交表单，随后文件将被上传到[http://domain/upload](http://domain/upload)，该页面完成上传后会把图片显示在页面上。
 差不多了，你现在也可以去Google一下，找点东西乱搞一下来完成功能。但是我们现在先不做这个。
 
 更进一步地说，在完成这一目标的过程中，我们不仅仅需要基础的代码而不管代码是否优雅。我们还要对此进行抽象，来寻找一种适合构建更为复杂的Node.js应用的方式。
@@ -223,7 +223,7 @@ http.createServer(onRequest).listen(8888);
 
 这个问题可不好回答（至少对我来说），不过这是Node.js原生的工作方式。它是事件驱动的，这也是它为什么这么快的原因。
 
-你也许会想花点时间读一下Felix Geisendörfer的大作Understanding node.js，它介绍了一些背景知识。
+你也许会想花点时间读一下Felix Geisendörfer的大作[Understanding node.js](http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb)，它介绍了一些背景知识。
 
 这一切都归结于“Node.js是事件驱动的”这一事实。好吧，其实我也不是特别确切的了解这句话的意思。不过我会试着解释，为什么它对我们用Node.js写网络应用（Web based application）是有意义的。
 
@@ -266,7 +266,7 @@ console.log("Server has started.");
 
 （请注意，当我们在服务器访问网页时，我们的服务器可能会输出两次“Request received.”。那是因为大部分浏览器都会在你访问 [http://localhost:8888/](http://localhost:8888/) 时尝试读取 [http://localhost:8888/favicon.ico](http://localhost:8888/favicon.ico)
 
-###服务器是如何处理请求的
+### 服务器是如何处理请求的
 
 好的，接下来我们简单分析一下我们服务器代码中剩下的部分，也就是我们的回调函数 onRequest() 的主体部分。
 

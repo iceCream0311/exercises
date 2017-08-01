@@ -46,5 +46,9 @@ function GetLength4(str) {
     var re = /[\u4e00-\u9fa5]|[\（\）\《\》\——\；\，\。\“\”\<\>\！]/g;
     /*  var re = /[^\x00-\xff]/g;*/
     var chineseArr = str.match(re);
-    return (str.length + chineseArr.length)
+    var len = str.length;
+    if (chineseArr.length) {
+        len += chineseArr.length
+    }
+    return len
 }

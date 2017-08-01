@@ -13,3 +13,4 @@
 9. [js轮播图](./carousel/index.html)
 10. [加载动画](./loading)
 11. [基于nodejs的简单应用](./nodes)
+12. [JS获取字符串长度，汉字算两个字节](./JS获取字符串长度，汉字算两个字节/index.html)

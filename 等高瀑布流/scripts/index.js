@@ -41,7 +41,7 @@ $(function() {
     function creatImage(baseHeight, baseNumber) {
         var container = $('<div></div>');
         for (var i = 0; i < nameArr.length; i++) {
-            if (i % baseNumber == 0 && i != 0) { //将图片添加到盒子内，并创建新的图片容器
+            if (i % baseNumber == 0) { //将图片添加到盒子内，并创建新的图片容器
                 $("body").append(container);
                 container = $('<div></div>');
                 container.height(baseHeight);

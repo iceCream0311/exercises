@@ -4,27 +4,30 @@ $(function() {
     var baseHeight = 170;
     var baseWidth = 200;
     var baseNumber = 3;
-    var deviceWidth = $("body").width();
-    creatImage(baseHeight, baseNumber)
-    finalheight()
-        /*屏幕尺寸变化更改图片个数并重新计算*/
+    resizeFn();
+
+    /*屏幕尺寸变化更改图片个数并重新计算*/
     window.onresize = function() {
-            deviceWidth = $("body").width();
-            if (deviceWidth > 960) {
-                baseHeight = 170
-                baseNumber = Math.ceil(960 / 200);
-            } else if (deviceWidth > 1920) {
-                baseHeight = 250;
-                baseNumber = Math.ceil(1920 / 300);
-            } else if (deviceWidth < 960) {
-                baseHeight = 100;
-                baseNumber = 3
-            }
-            $("body").html("")
-            creatImage(baseHeight, baseNumber)
-            finalheight()
+        resizeFn()
+    }
+
+    function resizeFn() {
+        deviceWidth = $("body").width();
+        if (deviceWidth > 960) {
+            baseHeight = 170
+            baseNumber = Math.ceil(960 / 200);
+        } else if (deviceWidth > 1920) {
+            baseHeight = 250;
+            baseNumber = Math.ceil(1920 / 300);
+        } else if (deviceWidth < 960) {
+            baseHeight = 100;
+            baseNumber = 3
         }
-        /*最终高度调整方法*/
+        $("body").html("")
+        creatImage(baseHeight, baseNumber)
+        finalheight()
+    }
+    /*最终高度调整方法*/
     function finalheight() {
         var imgIndex = $("img").length - 1;
         $("img").eq(imgIndex).on('load', function() {

@@ -51,6 +51,13 @@ $(function() {
                 container.height(baseHeight);
                 container.addClass('img_container')
             }
+            /*最后将不满一行的放到一行*/
+            if (nameArr.length % baseNumber != 0) {
+                if (i == nameArr.length - 1) {
+                    $("body").append(container);
+                }
+            }
+
             //图片
             var img = $('<img src="" />')
             img[0].src = `./nice/${nameArr[i]}`

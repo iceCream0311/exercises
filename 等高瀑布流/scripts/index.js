@@ -36,6 +36,7 @@ $(function() {
                 /*计算调整高度=现在图片高度/盒子宽度*浏览器宽度*/
                 var currentHeight = baseHeight / divW * deviceWidth;
                 $(".img_container").eq(j).children("img").height(currentHeight)
+                $(".img_container").eq(j).height(currentHeight)
             }
         })
     }

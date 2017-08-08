@@ -1,0 +1,40 @@
+body {
+  background: #15A49B;
+}
+
+.creditRating {
+  position: relative;
+}
+
+.arcBar {
+  display: block;
+  margin: 0 auto;
+}
+
+.creditScore {
+  width: 165px;
+  height: 190px;
+  margin: 0 auto;
+  margin-top: -190px;
+  background-color: transparent;
+}
+
+.creditScore p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.creditScore p img {
+  width: 25px;
+  margin-top: 10px;
+}
+
+.creditScore p .grade {
+  margin-right: 5px;
+}
+
+.creditScore p .value {
+  font-size: 54px;
+}

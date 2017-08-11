@@ -28,8 +28,8 @@ function sector(cx, cy, r, startAngle, endAngle, anti) {
   var linGrad = ctx.createLinearGradient(
     circleX, circleY - radius - lineWidth, circleX, circleY + radius + lineWidth
   );
-  linGrad.addColorStop(0.00, '#ffba4d'); // 绿色
-  linGrad.addColorStop(1.00, '#ff7163'); // 红色
+  linGrad.addColorStop(0.00, '#ffba4d');
+  linGrad.addColorStop(1.00, '#ff7163');
   ctx.strokeStyle = linGrad;
 
   // 圆弧两端的样式

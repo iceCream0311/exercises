@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Html5 Canvas 实现图片合成</title>
+    <script src="./jquery.min.js"></script>
+    <script src="jquery.qrcode.min.js"></script>
+    <script src="Canvas2Image.js"></script>
+    <style>
+    .img_photo {
+        position: relative;
+        width: 220px;
+        margin: 0 auto;
+        /* display: none; */
+    }
+    
+    img {
+        border: solid 1px #ddd;
+    }
+    
+    img:nth-child(1) {
+        width: 220px;
+        height: 390px;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    
+    img:nth-child(2) {
+        width: 88px;
+        height: 88px;
+        position: absolute;
+        left: 65px;
+        top: 248px;
+    }
+    /* #code { display: none } */
+    </style>
+</head>
+
+<body>
+    <div id="code"></div>
+    <div align="center" class="img_photo">
+        <img src="img2.png">
+    </div>
+    <input type="button" value="一键合成" id="btn" style="display:block;width: 60px; margin: 0 auto;">
+    <div id="imgBox" align="center"></div>
+    <script>
+    $(function() {
+        $("#code").qrcode({
+            render: "canvas",
+            width: 88, //宽度
+            height: 88, //高度
+            text: 'http://yf.huoxingyuny.cn/fortune_1/index.html?siteId=&productId=3'
+        });
+        $(".img_photo").append(canvasToImage(document.getElementById("code").getElementsByTagName("canvas")[0]))
+
+        function canvasToImage(canvas) {
+            var image = new Image();
+            image.src = canvas.toDataURL("image/png");
+            return image;
+        }
+
+        $("#btn").click(function() {
+            draw()
+        })
+
+        function draw(fn) {
+            var data1 = new Array();
+            var data2 = new Array();
+            for (var i = 0; i < $('.img_photo img').length; i++) {
+                data1[i] = $('.img_photo img').eq(i).attr('src');
+                data2[i] = {
+                    width: $('.img_photo img').eq(i).width(),
+                    height: $('.img_photo img').eq(i).height(),
+                    left: $('.img_photo img').eq(i).position().left,
+                    top: $('.img_photo img').eq(i).position().top
+                }
+                console.log(data2)
+            }
+            var c = document.createElement('canvas'),
+                ctx = c.getContext('2d'),
+                len = data1.length;
+            c.width = 220;
+            c.height = 390;
+            ctx.rect(0, 0, c.width, c.height);
+            ctx.fillStyle = 'transparent'; //画布填充颜色
+            ctx.fill();
+
+            function drawing(n) {
+                if (n < len) {
+                    var img = new Image;
+                    img.crossOrigin = 'Anonymous'; //解决跨域
+                    img.src = data1[n];
+                    img.onload = function() {
+                        ctx.drawImage(img, data2[n].left, data2[n].top, data2[n].width, data2[n].height);
+                        drawing(n + 1); //递归
+                    }
+                } else {
+                    //保存生成作品图片
+                    convertCanvasToImage(c);
+                }
+            }
+            drawing(0);
+        }
+
+        function convertCanvasToImage(canvas) {
+            var hc_image = new Image();
+            hc_image.src = canvas.toDataURL("image/png");
+            $('#imgBox').html(hc_image);
+        }
+    })
+    </script>
+</body>
+
+</html>

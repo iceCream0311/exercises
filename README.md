@@ -15,4 +15,5 @@
 11. [基于nodejs的简单应用](./nodes)
 12. [JS获取字符串长度，汉字算两个字节](./JS获取字符串长度，汉字算两个字节/index.html)
 13. [等高瀑布流](./等高瀑布流/index.html)
-14. [canvans环形进度条](https://icecream0311.github.io/exercises/canvans环形进度条/index.html)
+14. [canvas环形进度条](https://icecream0311.github.io/exercises/canvas环形进度条/index.html)
+15. [canvas实现两张图片合成一张图片](https://icecream0311.github.io/exercises/canvas实现两张图片合成一张图片/index.html)

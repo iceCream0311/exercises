@@ -17,3 +17,6 @@
 13. [等高瀑布流](./等高瀑布流/index.html)
 14. [canvas环形进度条](https://icecream0311.github.io/exercises/canvas环形进度条/index.html)
 15. [canvas实现两张图片合成一张图片](https://icecream0311.github.io/exercises/canvas实现两张图片合成一张图片/index.html)
+16. [iphoneX横屏侧边滚动](https://icecream0311.github.io/exercises/iphoneX横屏侧边滚动/index.html)
+17. [向上无缝滚动](https://icecream0311.github.io/exercises/无缝滚动/index.html)
+18. [代码段加载到另一个html中](https://icecream0311.github.io/exercises/相同代码的加载/test.html)

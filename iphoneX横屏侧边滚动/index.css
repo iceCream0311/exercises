@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding:0
+}
+.body{
+  width:510px;
+  margin: 50px auto;
+  height: 320px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  overflow: auto;
+}
+.side {
+    width: 24px;
+    height: 180px;
+    background: url(./header.png) no-repeat left center;
+    position: absolute;
+    margin-top: 66px;
+}
+.shape {
+    float: left;
+    width: 30px; height: 180px;
+    /* CSS Shapes中有个CSS属性名为shape-outside，可以让内联元素以不规则的形状进行外部排列 */
+   /*  shape-outside:polygon()，通过点坐标勾勒出和齐刘海形状相似的多边形形状 */
+    /* 类似于我们绘制canvas一样每一个逗号之间是xy的值，多个点画成和侧边图片类似的形状*/
+    shape-outside: polygon(0px 0px, 0px 66px, 16px 69px, 30px 82px, 30px 314230px, 16px 242px, 0px 246px, 0px 0px);
+    transition: shape-outside .15s;
+}
+ul li{
+  list-style: none;
+  line-height: 30px;
+  border-bottom: 1px solid #cdcdcd;
+  padding-left: 8px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+      <div class="body" id="box">
+        <div id="shape" class="shape" id="shape"></div>
+        <div class="side"></div>
+        <ul>
+          <li>我是一个滚动1</li>
+          <li>我也是一个滚动项</li>
+          <li>我是一个滚动4</li>
+          <li>我也是一个滚动项</li>
+          <li>我也是一个滚动项</li>
+          <li>我也是一个滚动项</li>
+          <li>我也是一个滚动项</li>
+          <li>我是一个滚动43</li>
+          <li>我是一个滚动43</li>
+          <li>我是一个滚动43</li>
+          <li>我也是一个滚动项</li>
+          <li>嘿嘿嘿IE或我Hi好或或或或</li>
+          <li>嘿嘿嘿IE或我Hi好或或或或</li>
+          <li>嘿嘿嘿IE或我Hi好或或或或</li>
+          <li>嘿嘿嘿IE或我Hi好或或或或</li>
+          <li>嘿嘿嘿IE或我Hi好或或或或</li>
+          <li>我也是一个滚动项</li>
+          <li>的费大幅度地方的</li>
+          <li>对方答复</li>
+          <li>我也是一个滚动项</li>
+          <li>我也是一f</li>
+          <li>hahahahah</li>
+          <li>我也是一f</li>
+          <li>xixixixixiix嘻嘻嘻嘻</li>
+          <li>我也是一f</li>
+          <li>呵呵呵呵呵呵呵呵</li>
+        </ul>
+      </div>
+    </body>
+    <script type="text/javascript">
+  var shapeDome=document.querySelector(".shape")
+      var boxDom=document.querySelector(".body")
+      /*保证了shape有足够的高度*/
+      shapeDome.style.height=boxDom.scrollHeight +'px';
+      var boxScollFun=function(){
+        var scrollTop=boxDom.scrollTop;
+        //随着滚动我们重新绘制图形，来保证图形位置，从而改变浮动外围浮动排雷
+       var shapeOutside= 'polygon(0 0, 0 '+ (66 + scrollTop) +'px, 16px '+ (69 + scrollTop) +'px, 30px '+ (82 + scrollTop) +'px, 30px '+ (230 + scrollTop) +'px, 16px '+ (242 + scrollTop) +'px, 0 '+ (246 + scrollTop) +'px, 0 0)';
+        shapeDome.style.shapeOutside =shapeOutside;
+      }
+     boxDom.addEventListener('scroll',boxScollFun)
+      boxScollFun()
+
+
+    </script>
+</html>

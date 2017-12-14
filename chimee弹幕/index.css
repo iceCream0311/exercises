@@ -1,0 +1,51 @@
+/*
+* @Author: Administrator
+* @Date:   2017-12-14 14:19:51
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-12-14 17:08:45
+*/
+
+.chimee-box,
+#mark {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* 广告*/
+
+.ad {
+    background-color: transparent;
+    border: 0;
+    position:
+}
+
+
+/* 广告整体 */
+
+.ad cm-pp-body {
+    padding: 0;
+    width: 70px;
+    text-align: center;
+}
+
+.ad img {
+    display: inline-block;
+    width: 30px;
+}
+
+.ad a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.ad em {
+    background-color: rgba(156, 85, 85, 0.66);
+    width: 60px;
+    border-radius: 5px;
+    font-size: 12;
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+}

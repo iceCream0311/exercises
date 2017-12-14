@@ -20,4 +20,4 @@
 16. [iphoneX横屏侧边滚动](https://icecream0311.github.io/exercises/iphoneX横屏侧边滚动/index.html)
 17. [向上无缝滚动](https://icecream0311.github.io/exercises/无缝滚动/index.html)
 18. [代码段加载到另一个html中](https://icecream0311.github.io/exercises/相同代码的加载/test.html)
-19. [chimee视屏播放并实现弹幕](./chimee弹幕)
+19. [chimee视屏播放并实现弹幕](https://icecream0311.github.io/exercises//chimee弹幕/index.html)

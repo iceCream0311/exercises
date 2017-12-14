@@ -2,7 +2,7 @@
  * @Author: alisa
  * @Date:   2017-12-14 14:23:12
  * @Last Modified by:   Administrator
- * @Last Modified time: 2017-12-14 17:07:21
+ * @Last Modified time: 2017-12-14 17:18:55
  */
 /*设置右上角广告图标*/
 var adPlugin = ChimeePlayer.popupFactory({
@@ -43,7 +43,7 @@ $('.emit').click(function() {
             fontSize: 'small',
             color: 'red'
         });
-        /* $('.inpt').val("")*/
+        $('.inpt').val("")
     })
     /*点击回车触发*/
 $(document).keydown(function(event) {

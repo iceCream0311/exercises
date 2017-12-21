@@ -1,8 +1,8 @@
-/*
+﻿/*
  * @Author: alisa
  * @Date:   2017-12-14 14:23:12
  * @Last Modified by:   Administrator
- * @Last Modified time: 2017-12-14 17:18:55
+ * @Last Modified time: 2017-12-14 18:00:08
  */
 /*设置右上角广告图标*/
 var adPlugin = ChimeePlayer.popupFactory({

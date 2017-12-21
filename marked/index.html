@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>marked.js的简单使用</title>
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.bootcss.com/marked/0.3.7/marked.js"></script>
+    <!-- 高亮 -->
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+  <div id="content"></div>
+    <script type="text/javascript">
+    var rendererMD = new marked.Renderer();
+    marked.setOptions({
+      renderer: rendererMD,//render存放的是一个对象，不声明时默认为new Renderer()。
+      gfm: true,//默认为true,允许 Git Hub标准的markdown.
+      tables: true,//默认为true。允许支持表格语法。该选项要求 gfm 为true。
+      breaks: true,//默认为false。允许回车换行。该选项要求 gfm 为true
+      pedantic: false,//默认为false。尽可能地兼容 markdown.pl的晦涩部分。不纠正原始模型任何的不良行为和错误。
+      sanitize: false,//false。对输出进行过滤（清理），将忽略任何已经输入的html代码（标签）
+      smartLists: true,//，默认为false。使用比原生markdown更时髦的列表。 旧的列表将可能被作为pedantic的处理内容过滤掉.
+      smartypants: false//默认为false。使用更为时髦的标点，比如在引用语法中加入破折号。
+    });
+
+    var markdownString = '```js\n console.log("hello");//这是一个代码段``` \rhahah\n` 是一个引用`\n   ## hahah \n ### hshs \n [我是一个连接](https://www.baidu.com)';
+    marked.setOptions({
+        highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+
+    document.getElementById('content').innerHTML = marked(markdownString);
+
+    </script>
+</html>

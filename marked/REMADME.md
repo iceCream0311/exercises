@@ -164,37 +164,37 @@ var rendererMD = new marked.Renderer();
 * link(string href, string title, string text)
 * image(string href, string title, string text)
 其它渲染参数
-`gfm`
+### gfm
 它是一个布尔值，默认为`true`。
 
 允许 Git Hub标准的`markdown`.
 
-`tables`
+### tables
 它是一个布尔值，默认为`true`。
 
 允许支持表格语法。该选项要求 gfm 为true。
 
-`breaks`
+### breaks
 它是一个布尔值，默认为`false`。
 
 允许回车换行。该选项要求 gfm 为true。
 
-`pedantic`
+### pedantic
 它是一个布尔值，默认为`false`。
 
 尽可能地兼容 `markdown.pl`的晦涩部分。不纠正原始模型任何的不良行为和错误。
 
-`sanitize`
+### sanitize
 它是一个布尔值，默认为`false`。
 
 对输出进行过滤（清理），将忽略任何已经输入的html代码（标签）
 
-`smartLists`
+### smartLists
 它是一个布尔值，默认为`false`。
 
 使用比原生markdown更时髦的列表。 旧的列表将可能被作为pedantic的处理内容过滤掉.
 
-`smartypants`
+### smartypants
 它是一个布尔值，默认为false。
 
 使用更为时髦的标点，比如在引用语法中加入破折号。
@@ -210,3 +210,7 @@ var rendererMD = new marked.Renderer();
     console.log(marked.parser(tokens));
     console.log(lexer.rules);//打出正则信息
     ```
+
+
+
+[阅读原文](https://www.cnblogs.com/djtao/p/6224399.html)

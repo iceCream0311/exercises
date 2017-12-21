@@ -1,7 +1,7 @@
 # marked.js简易手册
 本文介绍的是marked.js。秉持“来之即用”的原则，对它进行简要的翻译和归纳，
 
-##安装
+## 安装
 在网上引用或者是引用本地文件即可。要么就用命令行：
 
 ``` 
@@ -9,7 +9,7 @@ npm install marked --save
 
 ```
 
-##最简单用法
+## 最简单用法
 ```
     var rendererMD = new marked.Renderer();
     marked.setOptions({
@@ -37,7 +37,7 @@ ocument.getElementById('content').innerHTML =marked('# Marked in browser\n\nRend
 ```
 那么文字将以innerHTML的形式传入#content的div中。
 
-##marked方法
+## marked方法
 
 ```
   marked(markdownString [,options] [,callback])
